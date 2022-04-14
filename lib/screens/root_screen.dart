@@ -14,6 +14,59 @@ class _RootAppState extends State<RootApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: white,
+        shadowColor: Colors.grey.withOpacity(0.2),
+        title: const Text(
+          'Instagram',
+          style: TextStyle(
+            fontFamily: 'Billabong',
+            color: black,
+            fontSize: 37,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: null,
+            icon: Container(
+              width: 27,
+              height: 27,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/upload.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          IconButton(
+            onPressed: null,
+            icon: Container(
+              width: 27,
+              height: 27,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/love.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          IconButton(
+            onPressed: null,
+            icon: Container(
+              width: 27,
+              height: 27,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/chat.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
       body: getBody(),
       backgroundColor: white,
       bottomNavigationBar: getBottomNavigationBar(),
@@ -62,7 +115,8 @@ class _RootAppState extends State<RootApp> {
                       height: screenIndex != 4 ? 26 : 27,
                       decoration: BoxDecoration(
                         border: Border.all(
-                          width: screenIndex != 4 ? 0 : 1.2,
+                          color: black,
+                          width: screenIndex != 4 ? 0 : 1.3,
                         ),
                         shape: BoxShape.circle,
                         image: DecorationImage(
@@ -121,4 +175,4 @@ class _RootAppState extends State<RootApp> {
       screenIndex = index;
     });
   }
-} // MINUTO 10:06 DO VIDEO
+}
