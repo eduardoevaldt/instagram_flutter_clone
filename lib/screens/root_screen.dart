@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/home_screen.dart';
 import '../theme/colors.dart';
 
 class RootApp extends StatefulWidget {
@@ -133,12 +136,7 @@ class _RootAppState extends State<RootApp> {
 
   Widget getBody() {
     List<Widget> screens = [
-      const Center(
-        child: Text(
-          "Home",
-          style: TextStyle(fontSize: 20, color: black),
-        ),
-      ),
+      HomeScreen(),
       const Center(
         child: Text(
           "Search",
