@@ -2,9 +2,9 @@ List posts = [
   {
     "id": 1,
     "name": "eduardoevaldt",
-    "profileImg": "assets/images/perfil_1.jpg",
+    "profileImg": "assets/images/perfil_edu.jpg",
     "postImg": "assets/images/publicacao_1.jpg",
-    "caption": "Seu sucesso só depende de você.",
+    "caption": "O sucesso depende do seu esforço.",
     "isLoved": true,
     "commentCount": "10",
     "likedBy": "ericaselau",
@@ -12,35 +12,35 @@ List posts = [
   },
   {
     "id": 2,
-    "name": "leonhartannie17",
-    "profileImg": "assets/images/perfil_2.jpg",
+    "name": "usuario01",
+    "profileImg": "assets/images/perfil_1.jpg",
     "postImg": "assets/images/publicacao_2.jpg",
-    "caption": "Para ir contra a maioria, é preciso muita coragem.",
+    "caption": "Texto de descrição número 01",
     "isLoved": true,
     "commentCount": "15",
-    "likedBy": "vanilsoncarvalho",
+    "likedBy": "eduardo.evaldt",
     "timeAgo": "há 1 dia"
   },
   {
     "id": 3,
-    "name": "arminarlertsnk",
-    "profileImg": "assets/images/perfil_3.jpg",
+    "name": "usuario02",
+    "profileImg": "assets/images/perfil_2.jpg",
     "postImg": "assets/images/publicacao_3.jpg",
-    "caption": " Alguém que não pode fazer sacrifícios nunca poderá mudar nada",
+    "caption": " Texto ded descrição numero 2",
     "isLoved": false,
     "commentCount": "60",
-    "likedBy": "leonhartannie17",
+    "likedBy": "usuario01",
     "timeAgo": "há 3 dias"
   },
   {
     "id": 4,
-    "name": "gangstaking",
-    "profileImg": "assets/images/perfil_4.jpg",
+    "name": "usuario03",
+    "profileImg": "assets/images/perfil_3.jpg",
     "postImg": "assets/images/publicacao_4.jpg",
-    "caption": "Em busca dos meus sonhos",
+    "caption": "Em busca do objetivo",
     "isLoved": false,
     "commentCount": "70",
-    "likedBy": "arminarlertsnk",
-    "timeAgo": "há 3 dias"
+    "likedBy": "eduardo.evaldt",
+    "timeAgo": "há 2 dias"
   }
 ];

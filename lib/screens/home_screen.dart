@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/json/post_json.dart';
 import 'package:instagram_clone/json/profile_json.dart';
 import 'package:instagram_clone/json/story_json.dart';
 import 'package:instagram_clone/theme/colors.dart';
+import 'package:instagram_clone/widgets/post.dart';
 import 'package:instagram_clone/widgets/story.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,11 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                      right: 15,
-                      left: 15,
-                      bottom: 6,
-                    ),
+                    padding:
+                        const EdgeInsets.only(right: 20, left: 15, bottom: 5),
                     child: Column(
                       children: [
                         Container(
@@ -56,9 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 19,
                                   height: 19,
                                   decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: white,
-                                  ),
+                                      shape: BoxShape.circle, color: white),
                                   child: Icon(
                                     Icons.add_circle,
                                     color: buttonFollowColor,
@@ -73,15 +70,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 8,
                         ),
                         SizedBox(
-                          width: 60,
-                          child: Center(
-                            child: Text(
-                              name,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: black,
-                              ),
+                          width: 70,
+                          child: Text(
+                            name,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: black,
                             ),
                           ),
                         ),
@@ -100,8 +95,25 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+          Divider(
+            color: black.withOpacity(0.3),
+          ),
+          Column(
+            children: List.generate(posts.length, (index) {
+              return Post(
+                profileImg: posts[index]['profileImg'],
+                name: posts[index]['name'],
+                postImg: posts[index]['postImg'],
+                likedBy: posts[index]['likedBy'],
+                caption: posts[index]['caption'],
+                commentCount: posts[index]['commentCount'],
+                timeAgo: posts[index]['timeAgo'],
+                isLoved: posts[index]['isLoved'],
+              );
+            }),
+          ),
         ],
       ),
     );
   }
-}  //20:28
+}
